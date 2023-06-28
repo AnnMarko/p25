@@ -10,7 +10,7 @@ int main()
     char symb;
     cout << "\nВведите длину стороны холста и символ через пробел: ";
     cin >> n >> symb;
-    while (true) 
+    while (true)
     {
         cout << "\nВведите номер задания от 1 до 10: ";
         cin >> num;
@@ -52,8 +52,8 @@ int main()
             }
             break;
         case 5:
-            for (int i = 0; i <= n; i++) {
-                for (int j = 0; j <= n; j++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
                     if (!(i + j < n - 1 && i > j) && !(i + j > n - 1 && i < j)) cout << symb;
                     else cout << " ";
                 }
@@ -61,8 +61,8 @@ int main()
             }
             break;
         case 6:
-            for (int i = 0; i <= n; i++) {
-                for (int j = 0; j <= n; j++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
                     if (!(i + j < n - 1 && i < j) && !(i + j > n - 1 && i > j)) cout << symb;
                     else cout << " ";
                 }
