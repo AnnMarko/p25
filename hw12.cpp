@@ -8,7 +8,7 @@ int main()
 
     // 1
     int num{}, result{ 0 }, lenght{ 0 }, option{};
-    double average{0};
+    double average{ 0 };
     cout << "1)\nВведите число: ";
     cin >> num;
     int n = num;
@@ -16,52 +16,52 @@ int main()
     do {
         ++lenght;
         n /= 10;
-        } while (n);
+    } while (n);
 
     while (true) {
-            cout << "Выберите вариант действия:\n1 - Определить количество цифр\n2 - Посчитать их сумму"
-                            "\n3 - Посчитать их среднее арифметическое\n4 - Определить количество нулей\n5 - Следующее задание\n";
-            cin >> option;
+        cout << "Выберите вариант действия:\n1 - Определить количество цифр\n2 - Посчитать их сумму"
+            "\n3 - Посчитать их среднее арифметическое\n4 - Определить количество нулей\n5 - Следующее задание\n";
+        cin >> option;
 
-            if (option == 5) {
-                break;
-            }
+        if (option == 5) {
+            break;
+        }
 
-            switch (option) {
-            case 1:
-                cout << "Количество цифр: " << lenght << "\n";
-                break;
-            case 2:
-                for (int i = 0; i < lenght; i++) {
-                    result += ((int)(num / pow(10, i)) % 10);
-                }
-                cout << "Сумма цифр: " << result << "\n";
-                result = 0;
-                break;
-            case 3:
-                for (int i = 0; i < lenght; i++) {
-                    result += ((int)(num / pow(10, i)) % 10);
-                }
-                average = (double) result / lenght;
-                cout << "Среднее арифметическое цифр: " << average << "\n";
-                result = 0;
-                average = 0;
-                break;
-            case 4:
-                for (int i = 0; i < lenght; i++) {
-                    if (((int)(num / pow(10, i)) % 10) == 0) result++;
-                }
-                cout << "Количество нулей: " << result << "\n";
-                result = 0;
-                break;
-            default:
-                cout << "Неверный вариант" << "\n";
-                break;
+        switch (option) {
+        case 1:
+            cout << "Количество цифр: " << lenght << "\n";
+            break;
+        case 2:
+            for (int i = 0; i < lenght; i++) {
+                result += ((int)(num / pow(10, i)) % 10);
             }
-            cout << "\n";
+            cout << "Сумма цифр: " << result << "\n";
+            result = 0;
+            break;
+        case 3:
+            for (int i = 0; i < lenght; i++) {
+                result += ((int)(num / pow(10, i)) % 10);
+            }
+            average = (double)result / lenght;
+            cout << "Среднее арифметическое цифр: " << average << "\n";
+            result = 0;
+            average = 0;
+            break;
+        case 4:
+            for (int i = 0; i < lenght; i++) {
+                if (((int)(num / pow(10, i)) % 10) == 0) result++;
+            }
+            cout << "Количество нулей: " << result << "\n";
+            result = 0;
+            break;
+        default:
+            cout << "Неверный вариант" << "\n";
+            break;
+        }
+        cout << "\n";
     }
     cout << "\n";
-    
+
     // 2
     int len{};
     cout << "2)\nВведите размер клетки: ";
@@ -128,11 +128,10 @@ int main()
 
     // 4
     cout << "4)\n";
-    string letters = "ABCDEFGHIJ";
 
     for (int i = 0; i <= 9; i++) {
-        for (char j : letters) {
-            cout << j << i << " ";
+        for (int j = 65; j <= 74; j++) {
+            cout << (char) j << i << " ";
         }
         cout << "\n";
     }
