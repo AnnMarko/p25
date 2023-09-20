@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#define IS_EVEN(x) (x % 2 == 0)
+#define IS_EVEN(x) ((x) % 2 == 0)
 #define SUM1N(n) ((n) * ((n) + 1) / 2)
 #define POWER(base, exponent) (pow(base, exponent))
 
